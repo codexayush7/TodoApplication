@@ -1,0 +1,112 @@
+/* Root Styling */
+body {
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.todo-container {
+  max-width: 400px;
+  background-color: #fff;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
+.todo-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input */
+.todo-container input {
+  width: 70%;
+  padding: 10px;
+  border: 2px solid #a0c4ff;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.todo-container input:focus {
+  border-color: #5b9bd5;
+  box-shadow: 0 0 5px #a0c4ff;
+}
+
+/* Add Button */
+.todo-container button {
+  padding: 10px 14px;
+  margin-left: 10px;
+  background-color: #5b9bd5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.todo-container button:hover {
+  background-color: #4a90e2;
+}
+
+/* Task List */
+.todo-container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.todo-container li {
+  background-color: #f0f4f8;
+  margin: 10px 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideUp 0.4s ease forwards;
+}
+
+.todo-container li button {
+  background-color: #ff6b6b;
+  border: none;
+  padding: 6px 10px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.todo-container li button:hover {
+  background-color: #ff4d4d;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
